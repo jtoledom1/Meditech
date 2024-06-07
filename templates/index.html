@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+</head>
+<body>
+    <h1>Ingrese sus Datos</h1>
+    <form action="/inferencia" method="post">
+        <label for="obesidad">¿Padece de obesidad?</label>
+        <input type="checkbox" id="obesidad" name="obesidad" value="1"><br>
+        
+        <label for="historial_familiar">¿Tiene historial familiar de diabetes tipo 2?</label>
+        <input type="checkbox" id="historial_familiar" name="historial_familiar" value="1"><br>
 
+        <label for="sedentarismo">¿Lleva un estilo de vida sedentario?</label>
+        <input type="checkbox" id="sedentarismo" name="sedentarismo" value="1"><br>
+        
+        <button type="submit">Realizar Inferencia</button>
+    </form>
+</body>
+</html>
