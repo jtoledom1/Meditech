@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Datos</title>
+    <title>Formulario de Datos y Resultado de la Inferencia</title>
 </head>
 <body>
     <h1>Ingrese sus Datos</h1>
@@ -19,5 +19,18 @@
         
         <button type="submit">Consultar</button>
     </form>
+
+    {% if resultado %}
+    <h2>Resultado de la inferencia</h2>
+    <div>
+        <label>Factor de riesgo de diabetes para: {{ valores_usuario }}</label>
+        <p>{{ resultado }}</p>
+    </div>
+    <div>
+        <label>Tratamiento recomendado:</label>
+        <p>{{ tratamiento }}</p>
+    </div>
+    <a href="/">Volver al inicio</a>
+    {% endif %}
 </body>
 </html>

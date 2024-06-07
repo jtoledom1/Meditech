@@ -34,7 +34,7 @@ def index():
 
 @app.route('/inferencia', methods=['POST'])
 def inferir_diabetes():
-   # Mapear los nombres de los campos del formulario a versiones más legibles
+    # Mapear los nombres de los campos del formulario a versiones más legibles
     nombres_campos = {
         'obesidad': 'Obesidad',
         'historial_familiar': 'Historial Familiar de Diabetes Tipo 2',
@@ -52,9 +52,8 @@ def inferir_diabetes():
     # Realizar la inferencia
     resultado_inferencia, tratamiento = inferencia_diabetes(obesidad, historial_familiar, sedentarismo)
 
-
     # Renderizar la plantilla HTML con el resultado de la inferencia
-    return render_template('resultado.html', resultado=resultado_inferencia, tratamiento=tratamiento,valores_usuario=valores_usuario)
+    return render_template('index.html', resultado=resultado_inferencia, tratamiento=tratamiento, valores_usuario=valores_usuario)
 
 if __name__ == '__main__':
     app.run(debug=True)
